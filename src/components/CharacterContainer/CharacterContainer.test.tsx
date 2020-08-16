@@ -19,8 +19,6 @@ interface renderElementParameters {
 }
 
 const defaultProps:renderElementParameters  = {
-  getCharacters: jest.fn(),
-  setCharacter: jest.fn(),
   searchCharacters: jest.fn(),
   characters: [],
   character: GetCharacterMock,
@@ -56,12 +54,12 @@ describe('CharacterListContainer', () => {
 
   describe('on initial render', () => {
     const characters: ICharacter[] = [];
-    const getCharacters = jest.fn().mockResolvedValue(GetCharactersMock);
+    const searchCharacters = jest.fn().mockResolvedValue(GetCharactersMock);
     mockUseEffect();
-    const wrapper = renderCharacterListContainer({ characters, getCharacters });
+    const wrapper = renderCharacterListContainer({ characters, searchCharacters });
 
     it('calls getCharacters', () => {
-      expect(getCharacters).toHaveBeenCalledTimes(1);
+      expect(searchCharacters).toHaveBeenCalledTimes(1);
     });
 
     it('a character container', () => {

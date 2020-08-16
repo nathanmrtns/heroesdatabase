@@ -11,37 +11,14 @@ import {
 import CharacterActionTypes from './CharacterActionTypes.enum';
 
 // Tests
-describe('setCharacter', () => {
-  it('creates ISetCharacterAction', () => {
-    const action = setCharacterActionCreator(GetCharacterMock);
-
-    expect(action).toEqual({
-      type: CharacterActionTypes.SET_CHARACTER,
-      character: GetCharacterMock,
-      isFetching: false,
-    });
-  });
-});
-
 describe('searchCharacters', () => {
   it('creates ISearchCharactersAction', () => {
-    const term = "Darth";
+    const term = "Batman";
     const action = searchCharactersActionCreator(term);
 
     expect(action).toEqual({
       type: CharacterActionTypes.SEARCH_CHARACTERS,
       term,
-      isFetching: true,
-    });
-  });
-});
-
-describe('getCharactersStart', () => {
-  it('creates IGetCharactersStartAction', () => {
-    const action = getCharactersStartActionCreator();
-
-    expect(action).toEqual({
-      type: CharacterActionTypes.GET_CHARACTERS_START,
       isFetching: true,
     });
   });

@@ -5,8 +5,6 @@ import IAppState from '../../store/IAppState.interface';
 import ICharacter from '../../sources/ICharacter.interface';
 
 import {
-  setCharacterActionCreator,
-  getCharactersStartActionCreator,
   searchCharactersActionCreator
 } from '../../actions/CharacterActionCreators';
 
@@ -17,8 +15,6 @@ import NavigationBar from '../NavigationBar/NavigationBar';
 import './CharacterContainer.css';
 
 interface IProps {
-  getCharacters: Function,
-  setCharacter: Function,
   searchCharacters: Function,
   character: any,
   characters: ICharacter[],
@@ -26,13 +22,13 @@ interface IProps {
 }
 
 export const CharacterContainer: React.FunctionComponent<IProps> = ({
-  getCharacters,
+  searchCharacters,
   characters,
   isFetching
 }) => {
   React.useEffect(() => {
-    getCharacters();
-  }, [getCharacters]);
+    searchCharacters("super");
+  }, [searchCharacters]);
 
   return (
     <div className="characters-container">
@@ -65,8 +61,6 @@ const mapStateToProps = (store: IAppState) => {
 // Make functions available on props
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    getCharacters: () => dispatch(getCharactersStartActionCreator()),
-    setCharacter: (character: any) => dispatch(setCharacterActionCreator(character)),
     searchCharacters: (term: string) => dispatch(searchCharactersActionCreator(term)),
   }
 }

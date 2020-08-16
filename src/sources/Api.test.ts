@@ -1,6 +1,5 @@
 import axios from 'axios';
 import {
-  getCharactersFromApi,
   searchCharactersFromApi,
 } from './Api';
 
@@ -9,13 +8,6 @@ describe('getCharacters', () => {
   beforeEach(() => {
     axios.get = jest.fn();
   })
-
-  describe('getCharacters', () => {
-    it('httpClient is called as expected', () => {
-      getCharactersFromApi();
-      expect(axios.get).toHaveBeenCalledWith('https://superheroapi.com/api.php/10223717305259940/search/man');
-    });
-  });
 
   describe('searchCharacters', () => {
     const searchString = 'Luke';
