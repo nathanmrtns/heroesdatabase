@@ -10,10 +10,7 @@ import Loader from '../../components/Loader/Loader';
 
 // Extract to helper?
 interface renderElementParameters {
-  getCharacters: jest.Mock,
   searchCharacters: jest.Mock,
-  setCharacter: jest.Mock,
-  character: ICharacter,
   characters: ICharacter[],
   isFetching: Boolean,
 }
@@ -21,7 +18,6 @@ interface renderElementParameters {
 const defaultProps:renderElementParameters  = {
   searchCharacters: jest.fn(),
   characters: [],
-  character: GetCharacterMock,
   isFetching: false,
 }
 

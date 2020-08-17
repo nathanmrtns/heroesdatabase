@@ -1,0 +1,16 @@
+.power-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+.power-card > span {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.power-card__icon {
+  width: 40px;
+  height: 40px;
+}

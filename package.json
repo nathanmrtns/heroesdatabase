@@ -11,6 +11,7 @@
     "@types/react": "^16.8.23",
     "@types/react-dom": "^16.8.5",
     "@types/react-redux": "^7.1.1",
+    "@types/react-router-dom": "^5.1.5",
     "axios": "^0.19.2",
     "bootstrap": "4.3.1",
     "enzyme": "^3.10.0",
@@ -18,7 +19,9 @@
     "enzyme-to-json": "^3.3.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-icons": "^3.10.0",
     "react-redux": "^7.1.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
     "react-test-renderer": "^16.8.6",
     "redux": "^4.0.4",
@@ -34,7 +37,8 @@
     "eject": "react-scripts eject",
     "start-js": "react-scripts start",
     "start": "npm-run-all -lp watch-css start-js",
-    "watch-css": "less-watch-compiler ./src/ ./src/"
+    "watch-css": "less-watch-compiler ./src/ ./src/",
+    "build-css": "less-watch-compiler --run-once src/ ./src/"
   },
   "eslintConfig": {
     "extends": "react-app"

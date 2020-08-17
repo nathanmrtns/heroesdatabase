@@ -31,6 +31,19 @@ const CharacterReducer: Reducer<ICharacterState, CharacterActions> = (
         isFetching: action.isFetching,
       };
     }
+    case CharacterActionTypes.GET_CHARACTER_DETAILS: {
+      return {
+        ...state,
+        isFetching: action.isFetching,
+      };
+    }
+    case CharacterActionTypes.GET_CHARACTERS_DETAILS_SUCCESS: {
+      return {
+        ...state,
+        character: action.character,
+        isFetching: action.isFetching,
+      };
+    }
     case CharacterActionTypes.GET_CHARACTERS_FAILURE: {
       return {
         ...state,

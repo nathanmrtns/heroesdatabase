@@ -10,7 +10,7 @@ const Loader: React.FunctionComponent<IProps> = () => (
       aria-valuenow={75}
       aria-valuemin={0}
       aria-valuemax={100}
-      style={{ width: '75%' }}
+      style={{ width: '100%' }}
     >Jarvis is trying to find your hero...</div>
   </div>
 );

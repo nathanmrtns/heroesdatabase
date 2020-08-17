@@ -1,0 +1,34 @@
+.details__header {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #393939;
+  width: 100vw;
+  height: 30vh;
+}
+.details__header > img {
+  height: 100%;
+}
+.details__powerstats {
+  display: flex;
+  justify-content: space-evenly;
+}
+.details__char-info {
+  display: flex;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.details__char-info > * > span {
+  line-height: 30px;
+}
+.details__char-info__appearance {
+  width: 30vw;
+  background-color: crimson;
+}
+.details__char-info__biography {
+  background-color: yellow;
+  width: 70vw;
+}
+.details .label {
+  font-weight: 700;
+}

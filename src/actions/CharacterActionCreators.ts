@@ -1,9 +1,11 @@
 // Business domain imports
 import CharacterActionTypes from './CharacterActionTypes.enum';
 import {
+  ISearchCharactersAction,
   IGetCharactersSuccessAction,
   IGetCharactersFailureAction,
-  ISearchCharactersAction
+  IGetCharacterDetailsAction,
+  IGetCharacterDetailsSuccessAction,
 } from './IGetCharactersActions.interface';
 import ICharacter from '../sources/ICharacter.interface';
 
@@ -29,3 +31,21 @@ export const getCharactersFailureActionCreator = (): IGetCharactersFailureAction
     isFetching: false,
   };
 }
+
+export const getCharacterDetailsActionCreator = (id: string): IGetCharacterDetailsAction => {
+  return {
+    type: CharacterActionTypes.GET_CHARACTER_DETAILS,
+    id,
+    isFetching: true,
+  };
+}
+
+export const getCharacterDetailsSuccessActionCreator = (character: ICharacter): IGetCharacterDetailsSuccessAction => {
+  return {
+    type: CharacterActionTypes.GET_CHARACTERS_DETAILS_SUCCESS,
+    character,
+    isFetching: false,
+  };
+}
+
+

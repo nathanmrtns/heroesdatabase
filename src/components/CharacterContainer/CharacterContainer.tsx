@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import IAppState from '../../store/IAppState.interface';
@@ -16,9 +16,8 @@ import './CharacterContainer.css';
 
 interface IProps {
   searchCharacters: Function,
-  character: any,
   characters: ICharacter[],
-  isFetching: Boolean
+  isFetching: Boolean,
 }
 
 export const CharacterContainer: React.FunctionComponent<IProps> = ({
@@ -26,23 +25,38 @@ export const CharacterContainer: React.FunctionComponent<IProps> = ({
   characters,
   isFetching
 }) => {
-  React.useEffect(() => {
+  const [search, setSearch] = useState('');
+  useEffect(() => {
     searchCharacters("super");
   }, [searchCharacters]);
+
+
+  const submitSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    searchCharacters(search);
+  }
 
   return (
     <div className="characters-container">
       <NavigationBar>
         {/* Some logo maybe */}
       </NavigationBar>
-
-      { isFetching
-        ? <Loader></Loader>
+      <div className='search'>
+        <form onSubmit={submitSearch}>
+          <input className="search-field" placeholder='Search a hero' value={search} onChange={e => setSearch(e.target.value)}></input>
+        </form>
+      </div>
+      {isFetching
+        ? <>
+          <Loader></Loader>
+        </>
         : (
+          <>
             <div className="list">
               <CharacterList
                 characters={characters} />
             </div>
+          </>
         )
       }
     </div>
@@ -52,7 +66,6 @@ export const CharacterContainer: React.FunctionComponent<IProps> = ({
 // Make data available on props
 const mapStateToProps = (store: IAppState) => {
   return {
-    character: store.characterState.character,
     characters: store.characterState.characters,
     isFetching: store.characterState.isFetching,
   };

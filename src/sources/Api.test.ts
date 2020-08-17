@@ -10,7 +10,7 @@ describe('getCharacters', () => {
   })
 
   describe('searchCharacters', () => {
-    const searchString = 'Luke';
+    const searchString = 'Batman';
 
     it('httpClient is called as expected', () => {
       searchCharactersFromApi(searchString);

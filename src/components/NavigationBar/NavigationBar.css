@@ -7,7 +7,10 @@
   background-image: url("https://wallpapercave.com/wp/RYXf6X6.jpg");
   background-size: contain;
 }
-.search-field {
+.search > form {
   width: 80%;
+}
+.search-field {
+  width: 100%;
   height: 50px;
 }

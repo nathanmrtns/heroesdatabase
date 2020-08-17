@@ -1,0 +1,45 @@
+.details {
+  &__header {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #393939;
+    width: 100vw;
+    height: 30vh;
+    
+    > img {
+      height: 100%;
+    }
+  }
+
+  &__powerstats {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__char-info {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    > * > span {
+      line-height: 30px;
+    }
+
+    &__appearance {
+      width: 30vw;
+      background-color: crimson;
+
+    }
+  
+    &__biography {
+      background-color: yellow;
+      width: 70vw;
+    }
+  }
+
+  .label {
+    font-weight: 700;
+  }
+
+}
