@@ -5,14 +5,12 @@ import NavigationBar from './NavigationBar';
 
 describe('NavigationBar', () => {
   const wrapper = shallow(
-    <NavigationBar>
-      <p>Yeah!</p>
-    </NavigationBar>
+    <NavigationBar/>
   );
 
   describe('renders', () => {
     it('loading text', () => {
-      expect(wrapper.contains('My Hero Academia')).toBe(true);
+      expect(wrapper.contains('HEROES DATABASE')).toBe(true);
     });
   });
 });

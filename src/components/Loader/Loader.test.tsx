@@ -8,7 +8,7 @@ describe('CharacterListItem', () => {
 
   describe('renders', () => {
     it('loading text', () => {
-      expect(wrapper.contains('Jarvis is trying to find your hero...')).toBe(true);
+      expect(wrapper.contains('Cerebro is trying to find your hero...')).toBe(true);
     });
   });
 });

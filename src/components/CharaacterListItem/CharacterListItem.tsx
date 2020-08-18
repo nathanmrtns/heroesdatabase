@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {RouteComponentProps, useHistory, withRouter} from 'react-router-dom';
+import {RouteComponentProps, useHistory} from 'react-router-dom';
 
 import './CharacterListItem.css';
 import ICharacter from '../../sources/ICharacter.interface';
@@ -24,4 +24,4 @@ const CharacterListItem: React.FunctionComponent<IProps> = ({ character }: IProp
   );
 };
 
-export default withRouter(CharacterListItem);
+export default CharacterListItem;

@@ -8,7 +8,7 @@ interface IProps { }
 const Loader: React.FunctionComponent<IProps> = () => (
   <div className='loader'>
     <img className="loader__image" src={icon}/>
-    <span className="loader__message"> Cerebro is trying to find your hero... </span>
+    <span className="loader__message">Cerebro is trying to find your hero...</span>
   </div>
 );
 
