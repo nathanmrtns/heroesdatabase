@@ -1,7 +1,7 @@
 import React from 'react'
 import { GiThink, GiBiceps, GiHoodedFigure, GiRevolt, GiSwordman, GiPowerLightning } from "react-icons/gi";
 
-import './PowerStatsItem.css'
+import './styles.css'
 
 interface PowerStatsProps {
   type: string,

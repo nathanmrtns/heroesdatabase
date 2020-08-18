@@ -5,6 +5,8 @@ import * as ReactDOM from 'react-dom';
 import configureStore from "./store/Store";
 import Root from './pages/root/Root';
 
+import './shared/GlobalStyle.css'
+
 // Generate the store
 const store = configureStore();
 

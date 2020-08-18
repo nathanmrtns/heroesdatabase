@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {RouteComponentProps, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
-import './CharacterListItem.css';
+import './styles.css';
 import ICharacter from '../../sources/ICharacter.interface';
 
-interface IProps extends RouteComponentProps<any>{
+interface IProps{
+  key?: string,
   character: ICharacter,
 }
 

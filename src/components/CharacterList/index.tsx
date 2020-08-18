@@ -2,9 +2,9 @@ import * as React from 'react';
 
 // Business domain imports
 import ICharacter from '../../sources/ICharacter.interface';
-import CharacterListItem from '../CharaacterListItem/CharacterListItem';
+import CharacterListItem from '../CharaacterListItem';
 
-import './CharacterList.css'
+import './styles.css'
 
 interface IProps {
   characters: ICharacter[];

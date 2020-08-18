@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 
-import './style.css';
+import './styles.css';
 
 interface IProps {
   title: string,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import NavigationBar from './NavigationBar';
+import NavigationBar from '.';
 
 describe('NavigationBar', () => {
   const wrapper = shallow(

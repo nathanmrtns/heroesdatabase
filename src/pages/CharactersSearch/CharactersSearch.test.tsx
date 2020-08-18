@@ -4,9 +4,9 @@ import { shallow, ShallowWrapper } from 'enzyme';
 // Business domain imports
 import GetCharacterMock from '../../sources/GetCharactersMock';
 import GetCharactersMock from '../../sources/GetCharactersMock';
-import { CharacterContainer } from './CharacterContainer';
+import {CharactersSearch} from '.';
 import ICharacter from '../../sources/ICharacter.interface';
-import Loader from '../../components/Loader/Loader';
+import Loader from '../../components/Loader';
 
 // Extract to helper?
 interface renderElementParameters {
@@ -15,7 +15,7 @@ interface renderElementParameters {
   isFetching: Boolean,
 }
 
-const defaultProps:renderElementParameters  = {
+const defaultProps: renderElementParameters = {
   searchCharacters: jest.fn(),
   characters: [],
   isFetching: false,
@@ -23,10 +23,10 @@ const defaultProps:renderElementParameters  = {
 
 const renderCharacterListContainer = (overrides: any): ShallowWrapper => {
   return shallow(
-    <CharacterContainer
-      {...defaultProps}
-      {...overrides}
-    />
+      <CharactersSearch
+        {...defaultProps}
+        {...overrides}
+      />
   );
 }
 
@@ -43,7 +43,6 @@ describe('CharacterListContainer', () => {
 
     it('display "Loader"', () => {
       const element = <Loader />;
-
       expect(wrapper.contains(element)).toBe(true);
     });
   });
@@ -60,6 +59,8 @@ describe('CharacterListContainer', () => {
     });
 
     it('a character container', () => {
+      expect(true)
+
       expect(wrapper.find('div.characters-container')).toHaveLength(1);
     });
   });

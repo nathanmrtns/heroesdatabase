@@ -3,12 +3,12 @@ import { mount } from 'enzyme';
 
 import ICharacter from '../../sources/ICharacter.interface';
 import GetCharacterMock from '../../sources/GetCharacterMock';
-import CharacterListItem from './CharacterListItem';
+import CharacterListItem from './';
 
 describe('CharacterListItem', () => {
   const setCharacter = jest.fn();
   const character: ICharacter = GetCharacterMock;
-  const wrapper = mount(<CharacterListItem key={character.name} character={character} />);
+  const wrapper = mount(<CharacterListItem character={character} />);
 
   describe('renders', () => {
     it('a list item', () => {

@@ -8,11 +8,11 @@ import {
   searchCharactersActionCreator
 } from '../../actions/CharacterActionCreators';
 
-import CharacterList from '../CharacterList/CharacterList';
-import Loader from '../Loader/Loader';
-import NavigationBar from '../NavigationBar/NavigationBar';
+import CharacterList from '../../components/CharacterList';
+import Loader from '../../components/Loader';
+import NavigationBar from '../../components/NavigationBar';
 
-import './CharacterContainer.css';
+import './styles.css';
 
 interface IProps {
   searchCharacters: Function,
@@ -20,7 +20,7 @@ interface IProps {
   isFetching: Boolean,
 }
 
-export const CharacterContainer: React.FunctionComponent<IProps> = ({
+export const CharactersSearch: React.FunctionComponent<IProps> = ({
   searchCharacters,
   characters,
   isFetching
@@ -78,4 +78,4 @@ const mapDispatchToProps = (dispatch: any) => {
 }
 
 // Connect the app aware container to the store and reducers
-export default connect(mapStateToProps, mapDispatchToProps)(CharacterContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CharactersSearch);

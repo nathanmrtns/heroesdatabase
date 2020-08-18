@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 // Business domain imports
 import App from './App';
-import CharacterContainer from '../components/CharacterContainer/CharacterContainer';
+import CharacterContainer from '../pages/CharactersSearch';
 
 describe('App', () => {
   const wrapper = shallow(<App />);

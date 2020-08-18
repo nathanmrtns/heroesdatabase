@@ -6,15 +6,15 @@ import {
 } from 'react-router-dom';
 
 // Business domain imports
-import CharacterContainer from '../components/CharacterContainer/CharacterContainer';
-import CharacterDetails from '../components/CharacterDetails/CharacterDetails';
+import CharacterContainer from '../pages/CharactersSearch';
+import CharacterDetails from '../pages/CharacterDetails';
 
 const App: React.SFC<{}> = () => {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={CharacterContainer}/>
-        <Route path="/character/:id" component={CharacterDetails}/>
+        <Route path="/character/:charId" component={CharacterDetails}/>
       </Switch>
     </Router>
   )

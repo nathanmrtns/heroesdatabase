@@ -1,46 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { RouteComponentProps } from 'react-router';
+import { useParams } from 'react-router';
 
 import IAppState from '../../store/IAppState.interface';
-
-import './CharacterDetails.css';
 
 import {
   getCharacterDetailsActionCreator
 } from '../../actions/CharacterActionCreators';
 
-import Loader from '../Loader/Loader';
-import NavigationBar from '../NavigationBar/NavigationBar';
-import PowerStatsItem from '../PowerStatsItem/PowerStatsItem';
-import TitleAndSubtitle from '../TitleAndSubtitle/TitleAndSubtitle';
-import ICharacter from '../../sources/ICharacter.interface';
+import Loader from '../../components/Loader';
+import NavigationBar from '../../components/NavigationBar';
+import PowerStatsItem from '../../components/PowerStatsItem';
+import TitleAndSubtitle from '../../components/TitleAndSubtitle';
 
-interface MatchParams {
-  id: string
-}
-
-interface MatchProps extends RouteComponentProps<MatchParams> {
-  params: MatchParams
-}
+import './styles.css';
 
 interface IProps {
   getCharacterDetails: Function,
   character: any,
   isFetching: Boolean,
-  match: MatchProps
 }
 
 export const CharacterDetails: React.FunctionComponent<IProps> = ({
   getCharacterDetails,
   character,
   isFetching,
-  match
 }) => {
+  const {charId} = useParams(); 
   React.useEffect(() => {
-    const charId = match.params.id
     getCharacterDetails(charId);
-  }, [getCharacterDetails]);
+  }, [charId, getCharacterDetails]);
 
   const renderPowerStats = (key: string) => {
     return <PowerStatsItem key={key} type={key} value={character.powerstats[key]} />
@@ -52,7 +41,7 @@ export const CharacterDetails: React.FunctionComponent<IProps> = ({
         Object.keys(stats).map(key => {
           const title = key;
           const value = stats[key]
-          return <TitleAndSubtitle title={title} subtitle={value}/>
+          return <TitleAndSubtitle key={title} title={title} subtitle={value}/>
         })
       }
     </>
@@ -67,7 +56,7 @@ export const CharacterDetails: React.FunctionComponent<IProps> = ({
           <div className="details">
             <div>
               <div className="details__header">
-                <img src={character.image.url}></img>
+                <img src={character.image.url} alt={character.name}></img>
                 <div className="details__header__name-stats-container">
                   <h1>{character.name}</h1>
                   <div className="powerstats">{
