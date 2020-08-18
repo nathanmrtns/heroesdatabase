@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {FunctionComponent} from 'react';
 import {useHistory} from 'react-router-dom';
 
 import './styles.css';
@@ -9,7 +9,7 @@ interface IProps{
   character: ICharacter,
 }
 
-const CharacterListItem: React.FunctionComponent<IProps> = ({ character }: IProps) => {
+const CharacterListItem: FunctionComponent<IProps> = ({ character }: IProps) => {
   let history = useHistory();
 
   const onClickHandler = (id: string) => (event: React.MouseEvent)  => {

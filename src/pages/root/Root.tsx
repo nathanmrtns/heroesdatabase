@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {FunctionComponent} from 'react';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
 
@@ -13,7 +13,7 @@ interface IProps {
 
 // Create a root component that receives the store via props and
 // wraps the App component with Provider, giving props to containers
-const Root: React.SFC<IProps> = ({ store }) => (
+const Root: FunctionComponent<IProps> = ({ store }) => (
   <Provider store={store}>
     <App />
   </Provider>

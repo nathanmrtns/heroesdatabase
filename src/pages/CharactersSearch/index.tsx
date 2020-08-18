@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { FunctionComponent, FormEvent, ChangeEvent, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import IAppState from '../../store/IAppState.interface';
@@ -21,23 +21,24 @@ interface IProps {
   isFetching: Boolean,
 }
 
-export const CharactersSearch: React.FunctionComponent<IProps> = ({
+export const CharactersSearch: FunctionComponent<IProps> = ({
   searchCharacters,
   characters,
   isFetching
 }) => {
   const [search, setSearch] = useState('');
   useEffect(() => {
-    searchCharacters("super");
+    const DEFAULT_SEARCH = "man";
+    searchCharacters(DEFAULT_SEARCH);
   }, [searchCharacters]);
 
 
-  const submitSearch = (e: React.FormEvent) => {
+  const submitSearch = (e: FormEvent) => {
     e.preventDefault()
     searchCharacters(search);
   }
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     setSearch(e.target.value);
   }

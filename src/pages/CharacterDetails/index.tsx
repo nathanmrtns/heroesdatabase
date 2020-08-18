@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FunctionComponent, useEffect} from 'react';
 import { connect } from 'react-redux';
 import { useParams } from 'react-router';
 
@@ -21,13 +21,13 @@ interface IProps {
   isFetching: Boolean,
 }
 
-export const CharacterDetails: React.FunctionComponent<IProps> = ({
+export const CharacterDetails: FunctionComponent<IProps> = ({
   getCharacterDetails,
   character,
   isFetching,
 }) => {
   const {charId} = useParams(); 
-  React.useEffect(() => {
+  useEffect(() => {
     getCharacterDetails(charId);
   }, [charId, getCharacterDetails]);
 

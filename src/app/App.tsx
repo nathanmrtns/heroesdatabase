@@ -9,7 +9,7 @@ import {
 import CharacterContainer from '../pages/CharactersSearch';
 import CharacterDetails from '../pages/CharacterDetails';
 
-const App: React.SFC<{}> = () => {
+const App = () => {
   return (
     <Router>
       <Switch>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, {FunctionComponent} from 'react';
 
 // Business domain imports
 import ICharacter from '../../sources/ICharacter.interface';
@@ -10,7 +10,7 @@ interface IProps {
   characters: ICharacter[];
 }
 
-const CharacterList: React.FunctionComponent<IProps> = ({ characters }) => (
+const CharacterList: FunctionComponent<IProps> = ({ characters }) => (
   <div className="hero-list">
     {characters && characters.map(character => (
       <CharacterListItem
