@@ -27,7 +27,6 @@
 }
 .details__header__name-stats-container .powerstats {
   display: flex;
-  justify-content: space-between;
   width: 70%;
   margin-top: 20px;
 }

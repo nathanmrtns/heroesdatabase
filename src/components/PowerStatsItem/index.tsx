@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {FunctionComponent} from 'react'
 import { GiThink, GiBiceps, GiHoodedFigure, GiRevolt, GiSwordman, GiPowerLightning } from "react-icons/gi";
 
 import './styles.css'
@@ -8,7 +8,7 @@ interface PowerStatsProps {
   value: string
 }
 
-const PowerStatsItem = (props: PowerStatsProps) => {
+const PowerStatsItem: FunctionComponent<PowerStatsProps> = ({type, value}) => {
 
   const getIconByType = (type: string) => {
     switch(type) {
@@ -29,7 +29,7 @@ const PowerStatsItem = (props: PowerStatsProps) => {
     }
   }
 
-  const {type, value} = props;
+  // const {type, value} = props;
 
   return <div className={`power-card power-card--${type}`}>
     {getIconByType(type)}

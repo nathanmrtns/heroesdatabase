@@ -11,6 +11,7 @@ import {
 import CharacterList from '../../components/CharacterList';
 import Loader from '../../components/Loader';
 import NavigationBar from '../../components/NavigationBar';
+import Search from '../../components/Search';
 
 import './styles.css';
 
@@ -36,15 +37,16 @@ export const CharactersSearch: React.FunctionComponent<IProps> = ({
     searchCharacters(search);
   }
 
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setSearch(e.target.value);
+  }
+
+
   return (
     <div className="characters-container">
       <NavigationBar />
-      <div className='search'>
-        <form onSubmit={submitSearch}>
-          <input className="search-field" placeholder='Search a hero' value={search} onChange={e => setSearch(e.target.value)}></input>
-          <button>SEARCH</button>
-        </form>
-      </div>
+      <Search value={search} onSubmit={submitSearch} onChange={onChange}/>
       {isFetching
         ? <>
           <Loader></Loader>
