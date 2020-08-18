@@ -1,17 +1,14 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 import './NavigationBar.css'
 
-interface IProps {
-  children: ReactNode,
-}
-
-const NavigationBar: React.FunctionComponent<IProps> = ({ children }) => (
-  <>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <span>My Hero Academia</span>
+const NavigationBar = () => {
+  return <>
+    <nav className="nav-bar">
+      <Link to="/">HEROES DATABASE</Link>
     </nav>
   </>
-);
+}
 
 export default NavigationBar;

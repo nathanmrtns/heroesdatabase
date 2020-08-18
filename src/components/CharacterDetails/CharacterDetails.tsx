@@ -13,6 +13,7 @@ import {
 import Loader from '../Loader/Loader';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import PowerStatsItem from '../PowerStatsItem/PowerStatsItem';
+import TitleAndSubtitle from '../TitleAndSubtitle/TitleAndSubtitle';
 import ICharacter from '../../sources/ICharacter.interface';
 
 interface MatchParams {
@@ -46,17 +47,12 @@ export const CharacterDetails: React.FunctionComponent<IProps> = ({
   }
 
   const renderStats = (stats: Record<string, any>) => {
-    const capitalize = (word: string) => {
-      return word[0].toUpperCase() + word.slice(1);
-    }
-
     return <>
       {
         Object.keys(stats).map(key => {
-          if (typeof stats[key] === "string") {
-            return <><span className="label" key={key}>{capitalize(key)}:</span> <span>{stats[key]}</span><br/></>
-          }
-          return <><span className="label" key={key}>{capitalize(key)}:</span> <span>{JSON.stringify(stats[key])}</span><br/></>
+          const title = key;
+          const value = stats[key]
+          return <TitleAndSubtitle title={title} subtitle={value}/>
         })
       }
     </>
@@ -64,10 +60,7 @@ export const CharacterDetails: React.FunctionComponent<IProps> = ({
 
   return (
     <div className="characters-container">
-      <NavigationBar>
-        {/* Some logo maybe */}
-      </NavigationBar>
-
+      <NavigationBar/>
       {isFetching || !(character)
         ? <Loader></Loader>
         : (
@@ -75,11 +68,13 @@ export const CharacterDetails: React.FunctionComponent<IProps> = ({
             <div>
               <div className="details__header">
                 <img src={character.image.url}></img>
-                <h1>{character.name}</h1>
-              </div>
-              <div className="details__powerstats">{
-                Object.keys(character.powerstats).map(renderPowerStats)
-              }
+                <div className="details__header__name-stats-container">
+                  <h1>{character.name}</h1>
+                  <div className="powerstats">{
+                    Object.keys(character.powerstats).map(renderPowerStats)
+                  }
+                  </div>
+                </div>
               </div>
             </div>
             <div className="details__char-info">
@@ -90,6 +85,7 @@ export const CharacterDetails: React.FunctionComponent<IProps> = ({
                 {renderStats(character.connections)}
               </div>
               <div className="details__char-info__appearance">
+                <h2>Appearance</h2>
                 {renderStats(character.appearance)}
               </div>
             </div>

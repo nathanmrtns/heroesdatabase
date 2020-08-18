@@ -38,12 +38,11 @@ export const CharacterContainer: React.FunctionComponent<IProps> = ({
 
   return (
     <div className="characters-container">
-      <NavigationBar>
-        {/* Some logo maybe */}
-      </NavigationBar>
+      <NavigationBar />
       <div className='search'>
         <form onSubmit={submitSearch}>
           <input className="search-field" placeholder='Search a hero' value={search} onChange={e => setSearch(e.target.value)}></input>
+          <button>SEARCH</button>
         </form>
       </div>
       {isFetching

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {RouteComponentProps, withRouter} from 'react-router-dom';
+import {RouteComponentProps, useHistory, withRouter} from 'react-router-dom';
 
 import './CharacterListItem.css';
 import ICharacter from '../../sources/ICharacter.interface';
@@ -8,10 +8,12 @@ interface IProps extends RouteComponentProps<any>{
   character: ICharacter,
 }
 
-const CharacterListItem: React.FunctionComponent<IProps> = ({ character, history }: IProps) => {
+const CharacterListItem: React.FunctionComponent<IProps> = ({ character }: IProps) => {
+  let history = useHistory();
+
   const onClickHandler = (id: string) => (event: React.MouseEvent)  => {
     event.preventDefault();
-    history.push(`/characted/${id}`);
+    history.push(`/character/${id}`);
   }
 
   return (

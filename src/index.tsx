@@ -4,7 +4,6 @@ import * as ReactDOM from 'react-dom';
 // Business domain
 import configureStore from "./store/Store";
 import Root from './pages/root/Root';
-import 'bootstrap/dist/css/bootstrap.css';
 
 // Generate the store
 const store = configureStore();

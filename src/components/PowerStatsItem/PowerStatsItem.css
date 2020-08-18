@@ -3,14 +3,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 65px;
+  height: 65px;
+  color: white;
+  border-radius: 50%;
 }
 .power-card > span {
   font-weight: 700;
-  text-transform: capitalize;
+  font-size: 10px;
+  text-transform: uppercase;
 }
 .power-card__icon {
-  width: 40px;
-  height: 40px;
+  width: 30%;
+  height: 30%;
+}
+.power-card--strength {
+  background-color: #D90A0A;
+}
+.power-card--intelligence {
+  background-color: #849324;
+}
+.power-card--power {
+  background-color: #FFB30F;
+  color: black;
+}
+.power-card--speed {
+  background-color: #11AB38;
+}
+.power-card--durability {
+  background-color: #596A69;
+}
+.power-card--combat {
+  background-color: #01295F;
 }

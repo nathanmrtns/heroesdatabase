@@ -1,17 +1,14 @@
 import * as React from 'react';
+import icon from '../../assets/marvel.svg'
 
-interface IProps {}
+import './styles.css'
+
+interface IProps { }
 
 const Loader: React.FunctionComponent<IProps> = () => (
-  <div className='progress'>
-    <div
-      className='progress-bar progress-bar-striped progress-bar-animated'
-      role='progressbar'
-      aria-valuenow={75}
-      aria-valuemin={0}
-      aria-valuemax={100}
-      style={{ width: '100%' }}
-    >Jarvis is trying to find your hero...</div>
+  <div className='loader'>
+    <img className="loader__image" src={icon}/>
+    <span className="loader__message"> Cerebro is trying to find your hero... </span>
   </div>
 );
 

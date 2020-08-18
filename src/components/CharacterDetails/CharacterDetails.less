@@ -1,26 +1,47 @@
 .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__header {
     display: flex;
     align-items: center;
     color: white;
-    background-color: #393939;
+    background-color: black;
     width: 100vw;
     height: 30vh;
-    
+    border-bottom: solid 8px rgb(114, 114, 114);
+    // box-sizing: border-box;
+
     > img {
       height: 100%;
     }
-  }
 
-  &__powerstats {
-    display: flex;
-    justify-content: space-evenly;
+    > div > h1 {
+      border-bottom: solid white;
+    }
+
+    &__name-stats-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 15px;
+
+      .powerstats {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        margin-top: 20px;
+      }
+    }
   }
 
   &__char-info {
     display: flex;
     margin-left: 20px;
     margin-right: 20px;
+    width: 70vw;
+    justify-content: center;
 
     > * > span {
       line-height: 30px;
@@ -28,13 +49,13 @@
 
     &__appearance {
       width: 30vw;
-      background-color: crimson;
-
+      padding-left: 10px;
+      border-left: solid 1px #8F8C8A;
     }
   
     &__biography {
-      background-color: yellow;
       width: 70vw;
+      padding-right: 20px;
     }
   }
 
