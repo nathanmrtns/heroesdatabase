@@ -11,7 +11,6 @@
     width: 100vw;
     height: 30vh;
     border-bottom: solid 8px rgb(114, 114, 114);
-    // box-sizing: border-box;
 
     > img {
       height: 100%;
@@ -29,9 +28,32 @@
 
       .powerstats {
         display: flex;
-        // justify-content: space-between;
         width: 70%;
         margin-top: 20px;
+
+        @media screen and (max-width: 450px) {
+          margin-top: 5px;
+          width: 100%;
+          justify-content: space-evenly;
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+      height: 50vh;
+
+      > img {
+        height: 50%;
+      }
+
+      > div > h1 {
+        border-bottom: solid white;
+        text-align: center;
       }
     }
   }
@@ -44,6 +66,12 @@
     justify-content: center;
     margin-bottom: 50px;
 
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+      width: 95%;
+      margin: 0 0;
+    }
+
     > * > span {
       line-height: 30px;
     }
@@ -52,11 +80,23 @@
       width: 30vw;
       padding-left: 10px;
       border-left: solid 1px #8F8C8A;
+
+      @media screen and (max-width: 450px) {
+        border-left: none;
+        padding-left: 0;
+        width: 100%;
+        border-top: solid 1px #8F8C8A;
+      }
     }
   
     &__biography {
       width: 70vw;
       padding-right: 20px;
+
+      @media screen and (max-width: 450px) {
+        width: 100%;
+        padding-right: 0px;
+      }
     }
   }
 

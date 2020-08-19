@@ -14,6 +14,11 @@
   transition-timing-function: linear;
   overflow: hidden;
 }
+@media screen and (max-width: 450px) {
+  .hero-card {
+    width: 100%;
+  }
+}
 .hero-card > img {
   height: 100%;
   width: 75px;
