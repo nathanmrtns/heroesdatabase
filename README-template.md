@@ -4,6 +4,10 @@
 | -----------|----------|-----------|-------|
 | ![Statements](#statements# "Make me better!") | ![Branches](#branches# "Make me better!") | ![Functions](#functions# "Make me better!") | ![Lines](#lines# "Make me better!") |
 
+###
+### [APP Screenshots](screenshots.md)
+
+
 # Usage
 
 This project requires `Node >=12` and `NPM >= 6`.
@@ -22,11 +26,6 @@ npm run dev
 
 That's it. Just Access `http://localhost:3000` in your browser.
 
-### Linting
-
-```
-npm run lint
-```
 
 ### Testing
 

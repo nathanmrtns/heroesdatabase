@@ -4,6 +4,10 @@
 | -----------|----------|-----------|-------|
 | ![Statements](https://img.shields.io/badge/Coverage-92.11%25-brightgreen.svg "Make me better!") | ![Branches](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg "Make me better!") | ![Functions](https://img.shields.io/badge/Coverage-81.82%25-yellow.svg "Make me better!") | ![Lines](https://img.shields.io/badge/Coverage-92.04%25-brightgreen.svg "Make me better!") |
 
+###
+### [APP Screenshots](screenshots.md)
+
+
 # Usage
 
 This project requires `Node >=12` and `NPM >= 6`.
@@ -22,11 +26,6 @@ npm run dev
 
 That's it. Just Access `http://localhost:3000` in your browser.
 
-### Linting
-
-```
-npm run lint
-```
 
 ### Testing
 
