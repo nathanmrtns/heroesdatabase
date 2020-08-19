@@ -39,7 +39,7 @@ export const CharacterDetails: FunctionComponent<IProps> = ({
         ? <Loader></Loader>
         : (
           <div className="details">
-            <div>
+            <>
               <div className="details__header">
                 <img src={character.image.url} alt={character.name}></img>
                 <div className="details__header__name-stats-container">
@@ -49,7 +49,7 @@ export const CharacterDetails: FunctionComponent<IProps> = ({
                   </div>
                 </div>
               </div>
-            </div>
+            </>
             <div className="details__char-info">
               <div className="details__char-info__biography">
                 <h2>Biography</h2>
