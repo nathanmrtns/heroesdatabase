@@ -2,13 +2,12 @@ import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 import GetCharactersMock from '../../sources/GetCharactersMock';
-import {CharactersSearch} from '.';
+import { CharactersSearch } from '.';
 import ICharacter from '../../sources/ICharacter.interface';
 import Loader from '../../components/Loader';
 import NavigationBar from '../../components/NavigationBar';
 import Search from '../../components/Search';
 
-// Extract to helper?
 interface renderElementParameters {
   searchCharacters: jest.Mock,
   characters: ICharacter[],
@@ -23,10 +22,10 @@ const defaultProps: renderElementParameters = {
 
 const renderCharacterListContainer = (overrides: any): ShallowWrapper => {
   return shallow(
-      <CharactersSearch
-        {...defaultProps}
-        {...overrides}
-      />
+    <CharactersSearch
+      {...defaultProps}
+      {...overrides}
+    />
   );
 }
 
@@ -59,8 +58,13 @@ describe('CharacterListContainer', () => {
     it('navbar, search an list containers', () => {
       expect(wrapper.find('div.characters-container')).toHaveLength(1);
       expect(wrapper.find(<NavigationBar />)).toBeDefined();
-      expect(wrapper.find(Search)).toBeDefined();
       expect(wrapper.find('div.list')).toHaveLength(1);
+      expect(wrapper.find(Search)).toBeDefined();
+      let submit = wrapper.find(Search).dive().find('button')
+      submit.simulate('click', {
+        preventDefault: () => { }
+      });
+      expect(searchCharacters).toHaveBeenCalledTimes(2);
     });
   });
 });

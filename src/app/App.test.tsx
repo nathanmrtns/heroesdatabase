@@ -1,18 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-// Business domain imports
-import App from './App';
-import CharacterContainer from '../pages/CharactersSearch';
+import { App } from './App';
 
-describe('App', () => {
-  const wrapper = shallow(<App />);
-
-  describe('renders', () => {
-    it('CharacterContainer', () => {
-      // const element = <div />;
-      // TODO APP TEST
-      expect(true).toEqual(true);
-    });
+describe("App Component", () => {
+  const wrapper = shallow(
+    <App />
+  );
+  it("should render without throwing an error", () => {
+    expect(wrapper).toBeDefined()
   });
 });
