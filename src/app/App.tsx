@@ -13,8 +13,8 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={CharacterContainer}/>
-        <Route path="/character/:charId" component={CharacterDetails}/>
+        <Route exact path="/" component={CharacterContainer} />
+        <Route path="/character/:charId" component={CharacterDetails} />
       </Switch>
     </Router>
   )

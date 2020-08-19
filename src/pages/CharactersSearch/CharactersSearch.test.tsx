@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-// Business domain imports
-import GetCharacterMock from '../../sources/GetCharactersMock';
 import GetCharactersMock from '../../sources/GetCharactersMock';
 import {CharactersSearch} from '.';
 import ICharacter from '../../sources/ICharacter.interface';
 import Loader from '../../components/Loader';
+import NavigationBar from '../../components/NavigationBar';
+import Search from '../../components/Search';
 
 // Extract to helper?
 interface renderElementParameters {
@@ -30,8 +30,6 @@ const renderCharacterListContainer = (overrides: any): ShallowWrapper => {
   );
 }
 
-// Workaround for Enyzme testing of useEffect
-// See: https://blog.carbonfive.com/2019/08/05/shallow-testing-hooks-with-enzyme/
 const mockUseEffect = (): jest.SpyInstance => {
   return jest.spyOn(React, 'useEffect').mockImplementation(f => f());
 }
@@ -55,13 +53,14 @@ describe('CharacterListContainer', () => {
 
     it('calls getCharacters', () => {
       expect(true)
-      // expect(searchCharacters).toHaveBeenCalledTimes(1);
+      expect(searchCharacters).toHaveBeenCalledTimes(1);
     });
 
-    it('a character container', () => {
-      expect(true)
-
+    it('navbar, search an list containers', () => {
       expect(wrapper.find('div.characters-container')).toHaveLength(1);
+      expect(wrapper.find(<NavigationBar />)).toBeDefined();
+      expect(wrapper.find(Search)).toBeDefined();
+      expect(wrapper.find('div.list')).toHaveLength(1);
     });
   });
 });

@@ -1,6 +1,6 @@
-import React, {FunctionComponent, useEffect} from 'react';
+import React, {FunctionComponent} from 'react';
 import { connect } from 'react-redux';
-import { useParams } from 'react-router';
+import { useParams} from 'react-router';
 
 import IAppState from '../../store/IAppState.interface';
 
@@ -27,7 +27,8 @@ export const CharacterDetails: FunctionComponent<IProps> = ({
   isFetching,
 }) => {
   const {charId} = useParams(); 
-  useEffect(() => {
+
+  React.useEffect(() => {
     getCharacterDetails(charId);
   }, [charId, getCharacterDetails]);
 

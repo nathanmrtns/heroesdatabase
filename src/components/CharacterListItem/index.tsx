@@ -9,7 +9,7 @@ interface IProps{
   character: ICharacter,
 }
 
-const CharacterListItem: FunctionComponent<IProps> = ({ character }: IProps) => {
+export const CharacterListItem: FunctionComponent<IProps> = ({ character }: IProps) => {
   let history = useHistory();
 
   const onClickHandler = (id: string) => (event: React.MouseEvent)  => {

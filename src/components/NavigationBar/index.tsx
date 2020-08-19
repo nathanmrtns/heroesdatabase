@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './styles.css'
 
-const NavigationBar = () => {
+export const NavigationBar = () => {
   return <>
     <nav className="nav-bar">
       <Link to="/">HEROES DATABASE</Link>

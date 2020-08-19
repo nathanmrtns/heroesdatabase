@@ -1,4 +1,4 @@
-import React, { FunctionComponent, FormEvent, ChangeEvent, useEffect, useState } from 'react';
+import React, { FunctionComponent, FormEvent, ChangeEvent, useState } from 'react';
 import { connect } from 'react-redux';
 
 import IAppState from '../../store/IAppState.interface';
@@ -27,7 +27,7 @@ export const CharactersSearch: FunctionComponent<IProps> = ({
   isFetching
 }) => {
   const [search, setSearch] = useState('');
-  useEffect(() => {
+  React.useEffect(() => {
     const DEFAULT_SEARCH = "man";
     searchCharacters(DEFAULT_SEARCH);
   }, [searchCharacters]);

@@ -2,6 +2,7 @@ import React, {FunctionComponent} from 'react'
 import { GiThink, GiBiceps, GiHoodedFigure, GiRevolt, GiSwordman, GiPowerLightning } from "react-icons/gi";
 
 import './styles.css'
+import { IconType } from 'react-icons/lib';
 
 interface PowerStatsProps {
   type: string,
@@ -11,25 +12,20 @@ interface PowerStatsProps {
 const PowerStatsItem: FunctionComponent<PowerStatsProps> = ({type, value}) => {
 
   const getIconByType = (type: string) => {
-    switch(type) {
-      case "intelligence":
-        return <GiThink className={`power-card__icon power-card--${type}`}/>;
-      case "strength":
-        return <GiBiceps className={`power-card__icon power-card--${type}`}/>;
-      case "speed":
-        return <GiHoodedFigure className={`power-card__icon power-card--${type}`}/>;
-      case "durability":
-        return <GiRevolt className={`power-card__icon power-card--${type}`}/>
-      case "combat":
-        return <GiSwordman className={`power-card__icon power-card--${type}`}/>;
-      case "power":
-        return <GiPowerLightning className={`power-card__icon power-card--${type}`}/>;
-      default:
-        return <GiHoodedFigure className={`power-card__icon power-card--${type}`}/>;
+    let Icon = GiThink;
+    let className = `power-card__icon power-card--${type}`;
+    let icons: Record<string, IconType> = {
+      "intelligence": GiThink,
+      "strength":GiBiceps,
+      "speed":GiHoodedFigure,
+      "durability":GiRevolt,
+      "combat": GiSwordman,
+      "power":GiPowerLightning,
     }
-  }
 
-  // const {type, value} = props;
+    Icon = icons[type];
+    return <Icon className={className}/>
+  }
 
   return <div className={`power-card power-card--${type}`}>
     {getIconByType(type)}
