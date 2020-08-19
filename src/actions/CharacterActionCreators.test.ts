@@ -2,9 +2,9 @@
 import GetCharacterMock from '../sources/GetCharacterMock';
 import GetCharactersMock from '../sources/GetCharactersMock';
 import {
-  setCharacterActionCreator,
   searchCharactersActionCreator,
-  getCharactersStartActionCreator,
+  getCharacterDetailsActionCreator,
+  getCharacterDetailsSuccessActionCreator,
   getCharactersSuccessActionCreator,
   getCharactersFailureActionCreator,
 } from './CharacterActionCreators';
@@ -20,6 +20,31 @@ describe('searchCharacters', () => {
       type: CharacterActionTypes.SEARCH_CHARACTERS,
       term,
       isFetching: true,
+    });
+  });
+});
+
+describe('characterDetails', () => {
+  it('creates IGetCharacterDetailsAction', () => {
+    const id = "1";
+    const action = getCharacterDetailsActionCreator(id);
+
+    expect(action).toEqual({
+      type: CharacterActionTypes.GET_CHARACTER_DETAILS,
+      id,
+      isFetching: true,
+    });
+  });
+});
+
+describe('getCharacterDetailsSuccess', () => {
+  it('creates getCharacterDetailsSuccessAction', () => {
+    const action = getCharacterDetailsSuccessActionCreator(GetCharacterMock);
+
+    expect(action).toEqual({
+      type: CharacterActionTypes.GET_CHARACTERS_DETAILS_SUCCESS,
+      character: GetCharacterMock,
+      isFetching: false,
     });
   });
 });
