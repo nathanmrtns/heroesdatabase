@@ -10,8 +10,9 @@ import CharacterContainer from '../pages/CharactersSearch';
 import CharacterDetails from '../pages/CharacterDetails';
 
 export const App = () => {
+  console.log(`${process.env.PUBLIC_URL}/`)
   return (
-    <Router>
+    <Router basename={`${process.env.PUBLIC_URL}/`}>
       <Switch>
         <Route exact path="/" component={CharacterContainer} />
         <Route path="/character/:charId" component={CharacterDetails} />
