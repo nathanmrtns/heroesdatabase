@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/heroesdatabase/static/css/main.83dd1daa.chunk.css",
+    "main.js": "/heroesdatabase/static/js/main.60b2720c.chunk.js",
+    "main.js.map": "/heroesdatabase/static/js/main.60b2720c.chunk.js.map",
+    "runtime~main.js": "/heroesdatabase/static/js/runtime~main.c87e1b25.js",
+    "runtime~main.js.map": "/heroesdatabase/static/js/runtime~main.c87e1b25.js.map",
+    "static/js/2.e729f842.chunk.js": "/heroesdatabase/static/js/2.e729f842.chunk.js",
+    "static/js/2.e729f842.chunk.js.map": "/heroesdatabase/static/js/2.e729f842.chunk.js.map",
+    "index.html": "/heroesdatabase/index.html",
+    "precache-manifest.43c70c64513160db05fb89493a6ebc49.js": "/heroesdatabase/precache-manifest.43c70c64513160db05fb89493a6ebc49.js",
+    "service-worker.js": "/heroesdatabase/service-worker.js",
+    "static/css/main.83dd1daa.chunk.css.map": "/heroesdatabase/static/css/main.83dd1daa.chunk.css.map",
+    "static/media/marvel.svg": "/heroesdatabase/static/media/marvel.f4e47a1c.svg"
+  }
+}
