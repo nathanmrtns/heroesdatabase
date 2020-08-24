@@ -8,7 +8,7 @@ An React application that uses SuperHeroAPI
 
 ###
 
-####[Live demo](nathanmrtns.github.io/heroesdatabase)
+#### [Live demo](nathanmrtns.github.io/heroesdatabase)
 
 #### [APP Screenshots](screenshots.md)
 
