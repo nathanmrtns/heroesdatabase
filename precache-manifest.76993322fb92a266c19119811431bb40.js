@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bbf01aa785a8cb44aeb3a12066e67525",
+    "revision": "df6d99162e2e937f1281b1e1d5d91d79",
     "url": "/heroesdatabase/index.html"
   },
   {
-    "revision": "9550c0ca6a23d4b63e19",
+    "revision": "f9c35283693f88aa2346",
     "url": "/heroesdatabase/static/css/main.83dd1daa.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/heroesdatabase/static/js/2.e729f842.chunk.js"
   },
   {
-    "revision": "9550c0ca6a23d4b63e19",
-    "url": "/heroesdatabase/static/js/main.60b2720c.chunk.js"
+    "revision": "f9c35283693f88aa2346",
+    "url": "/heroesdatabase/static/js/main.758a5bf4.chunk.js"
   },
   {
     "revision": "9932c32b9828f446d19e",
