@@ -1,13 +1,16 @@
 # Heroes Database
-An React application  that uses SuperHeroAPI
 
-| Statements | Branches | Functions | Lines |
-| -----------|----------|-----------|-------|
+An React application that uses SuperHeroAPI
+
+| Statements                                    | Branches                                  | Functions                                   | Lines                               |
+| --------------------------------------------- | ----------------------------------------- | ------------------------------------------- | ----------------------------------- |
 | ![Statements](#statements# "Make me better!") | ![Branches](#branches# "Make me better!") | ![Functions](#functions# "Make me better!") | ![Lines](#lines# "Make me better!") |
 
 ###
-### [APP Screenshots](screenshots.md)
 
+####[Live demo](nathanmrtns.github.io/heroesdatabase)
+
+#### [APP Screenshots](screenshots.md)
 
 # Usage
 
@@ -26,7 +29,6 @@ npm run dev
 ```
 
 That's it. Just Access `http://localhost:3000` in your browser.
-
 
 ### Testing
 
