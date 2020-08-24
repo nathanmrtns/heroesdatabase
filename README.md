@@ -1,4 +1,5 @@
-# FitFox Coding Challenge
+# Heroes Database
+An React application  that uses SuperHeroAPI
 
 | Statements | Branches | Functions | Lines |
 | -----------|----------|-----------|-------|

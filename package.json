@@ -1,6 +1,6 @@
 {
-  "homepage": "http://nathanmrtns.github.io/codingchallenge",
-  "name": "codingchallenge-heroes",
+  "homepage": "http://nathanmrtns.github.io/heroesdatabase",
+  "name": "heroes-database",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
